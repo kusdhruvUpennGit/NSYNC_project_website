@@ -26,10 +26,10 @@ NSYNC Project Report
 
 <p>The goals for this project have been revised to reflect updates in the hardware and functionality. Initially, the project intended to use ESP32 and ATmega328PB microcontrollers; however, the implementation now employs Pololu 3pi robots equipped with ATmega328P microcontrollers. The revised goals are as follows:</p>
 
-    1.	Wireless Control: Enable seamless control of the robots using XBee RF modules for wireless communication.
-    2.	Synchronized Bot Operations: Develop a two-bot system capable of executing synchronized tasks based on user inputs, including moving forward, backward, rotation, or line-following.
-    3.	Battery Monitoring: Integrate real-time monitoring of each bot's battery level to ensure operational efficiency.
-    4.	Low Battery Alert and Task Reallocation: Implement a system where a buzzer alerts when a bot’s battery is low, causing the bot to stop its wheels after a few seconds and reassign its tasks to the other bot to maintain uninterrupted operation.
+1.	Wireless Control: Enable seamless control of the robots using XBee RF modules for wireless communication.<br>
+2.	Synchronized Bot Operations: Develop a two-bot system capable of executing synchronized tasks based on user inputs, including moving forward, backward, rotation, or line-following.<br>
+3.	Battery Monitoring: Integrate real-time monitoring of each bot's battery level to ensure operational efficiency.<br>
+4.	Low Battery Alert and Task Reallocation: Implement a system where a buzzer alerts when a bot’s battery is low, causing the bot to stop its wheels after a few seconds and reassign its tasks to the other bot to maintain uninterrupted operation.<br>
 
 ## 4. Block Diagram
 
