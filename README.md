@@ -41,64 +41,7 @@ NSYNC Project Report
 
 ## 5. Software Requirments Specifications
 
-The software system is designed to facilitate efficient wireless communication, monitoring, and task management between XBee modules, Pololu 3pi robots, and ATmega328P microcontrollers. Below are the detailed functionalities:
-
-### SRS 1: XCTU Software
-1. XBee Configuration Using XCTU Software<br>
-    •Purpose: The system enables configuration of XBee modules to establish wireless communication between devices.<br>
-    •Functionality:<br>
-        Users can use the XCTU software to set up XBee modules for communication between the laptop, XBee end devices, and Pololu 3pi robots.<br>
-2. Message Display and Communication<br>
-    •Message Display:<br>
-    The system displays messages exchanged between the laptop and XBee modules on a terminal interface via UART protocol, allowing real-time monitoring of communication.<br>
-    •Communication Support:<br>
-    It ensures robust and seamless communication between XBee modules and ATmega328P microcontrollers.<br>
-    Task commands, status updates, and alerts are transmitted reliably, ensuring the operation of the connected devices.<br>
-3. Battery Monitoring and Alerts<br>
-    •Real-Time Monitoring:<br>
-    The system continuously monitors the battery voltage of the connected devices and displays the voltage levels on the terminal.<br>
-
-    •Alerts for Low Battery:<br>
-    If the battery voltage drops below a predefined safety threshold, the system generates a "Battery Low!" alert.
-4. Task Assignment and Reallocation<br>
-
-    User-Defined Commands: Users can input specific commands via XCTU software to assign tasks to the robots. Examples include:<br>
-    Input 1: Assign Bot 1 a specific task, such as rotating or other predefined actions.<br>
-    Input 2: Assign Bot 2 its designated task.<br>
-
-#### Process of Configuring Xbee Modules and Wireless Communication
-
-To achieve seamless wireless communication between the two Pololu 3pi bots and the laptop, we utilized the XBee S2C modules. The system was configured with one module as the Coordinator and the other two modules as Routers, following the process described below.<br>
-
-Configuration Process:<br>
-1. Hardware Setup:<br>
-    • The XBee S2C modules were connected to USB XBee adapters and linked to the laptop via USB ports. XCTU software was used to configure the modules.<br>
-    • The Coordinator and Router roles were assigned to the modules using XCTU.<br>
-
-2. Coordinator Configuration: <br>
-        The first module was set as the Coordinator with the following parameters:<br>
-        • PAN ID: 1234 (common network ID for all modules).<br>
-        • CE (Coordinator Enable): Enabled.<br>
-        • Destination Address DL: Set to FFFF (broadcast mode to communicate with all devices in the PAN ID).<br>
-        • The configuration was saved by clicking the "Write" button in XCTU.<br>
-3.	Router Configuration: The other two modules were configured as Routers with the following parameters:<br>
-• PAN ID: 1234 (same as the Coordinator).<br>
-• CE (Coordinator Enable): Disabled.<br>
-• Destination Address DL: Defaulted to 0 (addressing the Coordinator).<br>
-• Configuration was saved for each module.<br>
-
-4.	Testing Communication:<br>
-
-    • Two instances of XCTU software were opened on the laptop, one for the Coordinator and the other for a Router.<br>
-    • The Terminal mode in XCTU was used to test communication between the devices. Messages typed in one module's terminal were successfully transmitted and displayed on the other module's terminal, confirming proper configuration and functionality.<br>
-    • The communication was reliable, with transmitted messages appearing in blue and received messages in red, as seen in the attached screenshots.<br>
-
-Below screenshots show the configuration of xbee modules:
-
-![alt text](Images/2_XbeeCoordinator.png)
-
-![alt text](Images/3_XbeeRouter.png)
-
+The software system is designed to facilitate efficient wireless communication, monitoring, and task management between XBee modules, Pololu 3pi robots, and ATmega328P microcontrollers.
 
 <table>
   <thead>
@@ -163,6 +106,38 @@ Below screenshots show the configuration of xbee modules:
   </tbody>
 </table>
 
+#### Process of Configuring Xbee Modules and Wireless Communication
+
+To achieve seamless wireless communication between the two Pololu 3pi bots and the laptop, we utilized the XBee S2C modules. The system was configured with one module as the Coordinator and the other two modules as Routers, following the process described below.<br>
+
+Configuration Process:<br>
+1. Hardware Setup:<br>
+    • The XBee S2C modules were connected to USB XBee adapters and linked to the laptop via USB ports. XCTU software was used to configure the modules.<br>
+    • The Coordinator and Router roles were assigned to the modules using XCTU.<br>
+
+2. Coordinator Configuration: <br>
+        The first module was set as the Coordinator with the following parameters:<br>
+        • PAN ID: 1234 (common network ID for all modules).<br>
+        • CE (Coordinator Enable): Enabled.<br>
+        • Destination Address DL: Set to FFFF (broadcast mode to communicate with all devices in the PAN ID).<br>
+        • The configuration was saved by clicking the "Write" button in XCTU.<br>
+3.	Router Configuration: The other two modules were configured as Routers with the following parameters:<br>
+• PAN ID: 1234 (same as the Coordinator).<br>
+• CE (Coordinator Enable): Disabled.<br>
+• Destination Address DL: Defaulted to 0 (addressing the Coordinator).<br>
+• Configuration was saved for each module.<br>
+
+4.	Testing Communication:<br>
+
+    • Two instances of XCTU software were opened on the laptop, one for the Coordinator and the other for a Router.<br>
+    • The Terminal mode in XCTU was used to test communication between the devices. Messages typed in one module's terminal were successfully transmitted and displayed on the other module's terminal, confirming proper configuration and functionality.<br>
+    • The communication was reliable, with transmitted messages appearing in blue and received messages in red, as seen in the attached screenshots.<br>
+
+Below screenshots show the configuration of xbee modules:
+
+![alt text](Images/2_XbeeCoordinator.png)
+
+![alt text](Images/3_XbeeRouter.png)
 
 
 ## 6. Hardware Requirments
