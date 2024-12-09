@@ -20,7 +20,7 @@ NSYNC Project Report
 
 <p>The rapid expansion of e-commerce and logistics industries has driven a significant demand for efficient and automated warehouse solutions. To meet rising consumer expectations and navigate the complexities of modern supply chains, businesses increasingly rely on automation to streamline operations and reduce costs.</p>
 
-<po>Swarm robotics presents an innovative approach to enhancing warehouse efficiency by reducing human intervention and improving overall operational effectiveness. The collaborative capabilities of swarms enable optimized task distribution and resource utilization, facilitating seamless workflows. By harnessing swarm intelligence, warehouses benefit from task allocation, accelerated decision-making, and improved scalability, achieving enhanced performance and efficient resource management.</p>
+<p>Swarm robotics presents an innovative approach to enhancing warehouse efficiency by reducing human intervention and improving overall operational effectiveness. The collaborative capabilities of swarms enable optimized task distribution and resource utilization, facilitating seamless workflows. By harnessing swarm intelligence, warehouses benefit from task allocation, accelerated decision-making, and improved scalability, achieving enhanced performance and efficient resource management.</p>
 
 ## 3. Goals
 
