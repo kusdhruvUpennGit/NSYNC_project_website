@@ -35,8 +35,8 @@ NSYNC Project Report
 
 ![alt text](Images/1_BlockDiagram.png)
 
- * This block diagram shows the setup for a single Pololu 3pi bot, highlighting key components like sensors, motors, LEDs, and communication with the laptop using XBee modules.
-<p>The project now integrates two such bots, both controlled wirelessly, working in sync to share and complete tasks while autonomously managing battery levels and task reassignment.</p>
+ * This block diagram shows the setup for a single Pololu 3pi bot, highlighting key components like sensors, motors, LEDs, and communication with the laptop using XBee modules.<br>
+ * The project now integrates two such bots, both controlled wirelessly, working in sync to share and complete tasks while autonomously managing battery levels and task reassignment.
 
 
 ## 5. Software Requirments
