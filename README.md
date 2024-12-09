@@ -92,7 +92,7 @@ Configuration Process:<br>
     • The Terminal mode in XCTU was used to test communication between the devices. Messages typed in one module's terminal were successfully transmitted and displayed on the other module's terminal, confirming proper configuration and functionality.<br>
     • The communication was reliable, with transmitted messages appearing in blue and received messages in red, as seen in the attached screenshots.<br>
 
-Below screenshots show the configuration of xbee modules:<br>
+Below screenshots show the configuration of xbee modules:
 
 ![alt text](Images/2_XbeeCoordinator.png)
 
