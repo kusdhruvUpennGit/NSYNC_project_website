@@ -194,9 +194,9 @@ Below screenshots show the configuration of xbee modules:
     Trigger motor activation upon detection.<br>
     Calibration to handle varying reflectivity of surfaces.<br>
 
-## 7. Main Issues Faced
+## 8. Main Issues Faced
 
-### 7.1 Baud Rate Mismatch
+### 8.1 Baud Rate Mismatch
 
 During the configuration and testing of the XBee communication with the ATmega328P microcontroller, we encountered a significant issue with the baud rate. Despite configuring the system to operate at a baud rate of <b>115200</b>, we observed an error in data transmission. The data received was inconsistent and appeared to be sent at approximately <b>140000 baud</b>, leading to about <b>20% error in UART communication.</b>
 
@@ -213,7 +213,7 @@ After thorough debugging, we realized that the ATmega328P microcontroller was op
     The logic analyzer allowed us to confirm the actual baud rate being transmitted and verify that the adjusted prescaler correctly aligned the transmission rate with the configured baud rate of 115200.
 
 
-## 8. Power Management
+## 9. Power Management
 
 ![alt text](Images/4_PowerManagement.png)
 
@@ -227,9 +227,9 @@ After thorough debugging, we realized that the ATmega328P microcontroller was op
 
 • In summary, the 3pi’s power management system ensures maximum performance until the battery is fully drained, offering regulated voltage for reliable operation of all components while monitoring battery health for proactive power management.
 
-## 9. Detailed Explaination of Hardware Implementation
+## 10. Detailed Explaination of Hardware Implementation
 
-### 9.1 Motors
+### 10.1 Motors
 
 The Pololu 3pi robot uses brushed DC motors with a gear ratio of 30:1, which are ideal for the lightweight and agile design of the 3pi robot. The details are as follows:<br>
 
@@ -259,7 +259,7 @@ PWM Control:<br>
     Smooth acceleration and deceleration: Gradual adjustments in speed ensure stability.<br>
     Precise directional control: The robot follows curves with minimal overshooting.<br>
 
-### 9.2 Sensors
+### 10.2 Sensors
 
 The Pololu 3pi uses five reflectance sensors mounted underneath the chassis for line detection. These sensors are critical for determining the position of the robot on a line and ensuring accurate navigation. Here's a detailed breakdown:<br>
 Reflectance Sensor Design:<br>
@@ -280,7 +280,7 @@ Sensor Layout and Coverage:<br>
 •Five sensors are arranged in a row beneath the robot, ensuring wide coverage of the line.<br>
 •This layout allows the robot to detect curves and edges effectively, maintaining its trajectory even in complex paths.<br>
 
-### 9.3 Mircrocontroller and H-Bridge Motor Driver
+### 10.3 Mircrocontroller and H-Bridge Motor Driver
 
 Microcontroller: ATmega328<br>
 •The ATmega328P microcontroller handles motor control, sensor data processing, and high-level decision-making.<br>
@@ -304,7 +304,7 @@ Buttons for User Control:<br>
 
 
 
-### 10. Video Implementations
+### 11. Video Implementations
 
 Video link to final demo:
 [Link](https://drive.google.com/file/d/18RFZoYMZ_O98KFYrI4eGMwchdLWHGtCn/view?usp=drive_link)
@@ -341,5 +341,5 @@ Link to a video showing Motor and QTR sensors working together (Facing Calibrati
   [Link](https://drive.google.com/file/d/1ZaagUqCAhBXo545llPBmGqV77pNaJmeO/view?usp=drive_link)
 
 
-### 11.  Hardware Implementation
+### 12.  Hardware Implementation
 
