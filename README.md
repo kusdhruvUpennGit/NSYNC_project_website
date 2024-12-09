@@ -42,8 +42,8 @@ NSYNC Project Report
 ## 5. Software Requirments
 
 The software system is designed to facilitate efficient wireless communication, monitoring, and task management between XBee modules, Pololu 3pi robots, and ATmega328P microcontrollers. Below are the detailed functionalities:
-
-1. XBee Configuration Using XCTU Software
+### SRS 1: XCTU Software
+1. XBee Configuration Using XCTU Software<br>
     •Purpose: The system enables configuration of XBee modules to establish wireless communication between devices.<br>
     •Functionality:<br>
         Users can use the XCTU software to set up XBee modules for communication between the laptop, XBee end devices, and Pololu 3pi robots.<br>
@@ -65,7 +65,7 @@ The software system is designed to facilitate efficient wireless communication, 
     Input 1: Assign Bot 1 a specific task, such as rotating or other predefined actions.<br>
     Input 2: Assign Bot 2 its designated task.<br>
 
-### 5.1 Process of Configuring Xbee Modules and Wireless Communication
+#### Process of Configuring Xbee Modules and Wireless Communication
 
 To achieve seamless wireless communication between the two Pololu 3pi bots and the laptop, we utilized the XBee S2C modules. The system was configured with one module as the Coordinator and the other two modules as Routers, following the process described below.<br>
 
@@ -74,7 +74,7 @@ Configuration Process:<br>
     • The XBee S2C modules were connected to USB XBee adapters and linked to the laptop via USB ports. XCTU software was used to configure the modules.<br>
     • The Coordinator and Router roles were assigned to the modules using XCTU.<br>
 
-2. Coordinator Configuration: 
+2. Coordinator Configuration: <br>
         The first module was set as the Coordinator with the following parameters:<br>
         • PAN ID: 1234 (common network ID for all modules).<br>
         • CE (Coordinator Enable): Enabled.<br>
@@ -100,59 +100,52 @@ Below screenshots show the configuration of xbee modules:
 
 ## 6. Hardware Requirments
 
-1. XBee S2C Modules<br>
+### HRS 1: XBee S2C Modules<br>
 •Purpose: Wireless communication between the laptop, robots, and microcontrollers.<br>
     •Key Requirements:<br>
     Configurable using XCTU software for seamless communication.<br>
     Reliable data transmission and reception for task assignment and monitoring.<br>
     Proper antenna alignment and baud rate matching.<br>
 
-2. Pololu 3pi Robots<br>
+### HRS 2: Pololu 3pi Robots<br>
 •Purpose: Serve as the robotic platforms for executing tasks.<br>
     •Key Features:<br>
     Equipped with onboard motor drivers for precise motor control.<br>
     Built-in IR sensors for line following and object detection.<br>
     Expandable with external modules like XBee for wireless operations.<br>
 
-3. ATmega328P Microcontroller (built in pololu 3pi bot)<br>
+### HRS 3: ATmega328P Microcontroller (built in pololu 3pi bot)<br>
 •Purpose: Process commands, control motors, and handle peripheral components.<br>
     •Key Requirements:<br>
     Interfacing capability with XBee modules.<br>
     Support for pushbutton controls for manual task testing.<br>
     ADC functionality to monitor battery voltage.<br>
 
-4. Motors<br>
+### 4: Motors<br>
 •Purpose: Perform movement tasks as commanded.<br>
     •Key Requirements:<br>
     Compatible with the Pololu 3pi motor drivers.<br>
     Reliable operation for tasks such as rotating and navigation.<br>
 
-5. Buzzer<br>
+### 5: Buzzer<br>
 •Purpose: Provide audio alerts for specific conditions (e.g., low battery).<br>
     •Key Features:<br>
     Triggered by battery voltage monitoring via the ADC.<br>
     Stops operation of the bot to conserve energy when triggered.<br>
 
-6. LEDs<br>
+### 6: LEDs<br>
 •Purpose: Provide visual feedback during operations.<br>
     •Key Requirements:<br>
     Indicate successful data transmission or task execution.<br>
     Clear visibility in all operating environments.<br>
 
-7. Pushbuttons<br>
+### 7: Pushbuttons<br>
 •Purpose: Allow manual testing of bot operations and features.<br>
     •Key Requirements:<br>
     Responsive and easy to integrate with the microcontroller.<br>
     Configurable for triggering specific tasks or actions.<br>
 
-8. Battery and Power Monitoring<br>
-•Purpose: Power supply for the bots and real-time voltage monitoring.<br>
-    •Key Requirements:<br>
-    Rechargeable batteries with a predefined voltage threshold.<br>
-    ADC input (e.g., ADC6 pin) for voltage monitoring.<br>
-    Integration with a warning system (buzzer and message transmission).<br>
-
-9. IR (QTR) Sensors<br>
+### 8: IR (QTR) Sensors<br>
 •Purpose: Detect nearby objects and enable automated responses.<br>
     •Key Requirements:<br>
     Accurate detection of objects within proximity.<br>
