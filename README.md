@@ -39,9 +39,10 @@ NSYNC Project Report
  * The project now integrates two such bots, both controlled wirelessly, working in sync to share and complete tasks while autonomously managing battery levels and task reassignment.
 
 
-## 5. Software Requirments
+## 5. Software Requirments Specifications
 
 The software system is designed to facilitate efficient wireless communication, monitoring, and task management between XBee modules, Pololu 3pi robots, and ATmega328P microcontrollers. Below are the detailed functionalities:
+
 ### SRS 1: XCTU Software
 1. XBee Configuration Using XCTU Software<br>
     •Purpose: The system enables configuration of XBee modules to establish wireless communication between devices.<br>
@@ -97,6 +98,72 @@ Below screenshots show the configuration of xbee modules:
 ![alt text](Images/2_XbeeCoordinator.png)
 
 ![alt text](Images/3_XbeeRouter.png)
+
+
+<table>
+  <thead>
+    <tr>
+      <th>SRS</th>
+      <th>Objective</th>
+      <th>Specifications</th>
+      <th>Expected Outcome</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SRS 1</td>
+      <td>Create a mesh network between XBee Coordinator and XBee Endpoints</td>
+      <td>
+        <ul>
+          <li>Configure 1 XBee Coordinator and 2 XBee End Devices as routers.</li>
+          <li>Set all devices to the same PAN ID for communication.</li>
+        </ul>
+      </td>
+      <td>The Coordinator successfully sends commands to the End Devices.</td>
+      <td><strong>Pass</strong>: The Coordinator successfully communicated with the End Devices, achieving the intended functionality.</td>
+    </tr>
+    <tr>
+      <td>SRS 2</td>
+      <td>Wirelessly control the Pololu 3pi bots through the serial monitor via XBee Coordinator.</td>
+      <td>
+        <ul>
+          <li>Command <code>1</code>: Control Pololu Robot 1 to perform its task (rotate).</li>
+          <li>Command <code>2</code>: Control Pololu Robot 2 to perform its task (rotate).</li>
+          <li>Ignore other commands.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Robot 1 rotates upon receiving Command <code>1</code>.</li>
+          <li>Robot 2 rotates upon receiving Command <code>2</code>.</li>
+          <li>Other commands have no effect.</li>
+        </ul>
+      </td>
+      <td><strong>Pass</strong>: Robot 1 and Robot 2 performed their tasks correctly, while other commands had no effect.</td>
+    </tr>
+    <tr>
+      <td>SRS 3</td>
+      <td>Use buttons on ATmega328PB microcontroller to wirelessly control Pololu 3pi bots via XBee network.</td>
+      <td>
+        <ul>
+          <li>Button <code>1</code>: Send a command to Robot 1 to perform its task.</li>
+          <li>Button <code>2</code>: Send a command to Robot 2 to perform its task.</li>
+          <li>Ensure communication between ATmega328PB and Pololu 3pi bots over XBee network.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Robot 1 performs its task when Button <code>1</code> is pressed.</li>
+          <li>Robot 2 performs its task when Button <code>2</code> is pressed.</li>
+        </ul>
+      </td>
+      <td><strong>Not Completed</strong>: Baud rate mismatch between ATmega328PB (16 MHz) and Pololu 3pi bots (20 MHz). XBee communication at 115200 baud was unsuccessful.</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 ## 6. Hardware Requirments
 
