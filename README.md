@@ -121,31 +121,31 @@ Below screenshots show the configuration of xbee modules:
     Support for pushbutton controls for manual task testing.<br>
     ADC functionality to monitor battery voltage.<br>
 
-### HRS 4: Motors<br>
+### HRS 4: Motors (built in pololu 3pi bot)<br>
 •Purpose: Perform movement tasks as commanded.<br>
     •Key Requirements:<br>
     Compatible with the Pololu 3pi motor drivers.<br>
     Reliable operation for tasks such as rotating and navigation.<br>
 
-### HRS 5: Buzzer<br>
+### HRS 5: Buzzer (built in pololu 3pi bot)<br>
 •Purpose: Provide audio alerts for specific conditions (e.g., low battery).<br>
     •Key Features:<br>
     Triggered by battery voltage monitoring via the ADC.<br>
     Stops operation of the bot to conserve energy when triggered.<br>
 
-### HRS 6: LEDs<br>
+### HRS 6: LEDs (built in pololu 3pi bot)<br>
 •Purpose: Provide visual feedback during operations.<br>
     •Key Requirements:<br>
     Indicate successful data transmission or task execution.<br>
     Clear visibility in all operating environments.<br>
 
-### HRS 7: Pushbuttons<br>
+### HRS 7: Pushbuttons (built in pololu 3pi bot)<br>
 •Purpose: Allow manual testing of bot operations and features.<br>
     •Key Requirements:<br>
     Responsive and easy to integrate with the microcontroller.<br>
     Configurable for triggering specific tasks or actions.<br>
 
-### HRS 8: IR (QTR) Sensors<br>
+### HRS 8: IR (QTR) Sensors (built in pololu 3pi bot)<br>
 •Purpose: Detect nearby objects and enable automated responses.<br>
     •Key Requirements:<br>
     Accurate detection of objects within proximity.<br>
