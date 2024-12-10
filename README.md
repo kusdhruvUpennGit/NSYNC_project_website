@@ -39,7 +39,7 @@ NSYNC Project Report
  * The project now integrates two such bots, both controlled wirelessly, working in sync to share and complete tasks while autonomously managing battery levels and task reassignment.
 
 
-## 5. Software Requirments Specifications
+## 5. Software Requirements Specifications
 
 The software system is designed to facilitate efficient wireless communication, monitoring, and task management between XBee modules, Pololu 3pi robots, and ATmega328P microcontrollers.
 
@@ -140,7 +140,7 @@ Below screenshots show the configuration of xbee modules:
 ![alt text](Images/3_XbeeRouter.png)
 
 
-## 6. Hardware Requirments
+## 6. Hardware Requirements
 
 
 <table>
@@ -331,7 +331,12 @@ Buttons for User Control:<br>
 
 
 
-### 11. Video Implementations
+### 11. Video Implementations and Screenshots
+
+
+![alt text](Images/Picture2.png)
+
+![alt text](<Images/Picture 1.png>)
 
 Video link to final demo:
 [Link](https://drive.google.com/file/d/18RFZoYMZ_O98KFYrI4eGMwchdLWHGtCn/view?usp=drive_link)
@@ -368,5 +373,10 @@ Link to a video showing Motor and QTR sensors working together (Facing Calibrati
   [Link](https://drive.google.com/file/d/1ZaagUqCAhBXo545llPBmGqV77pNaJmeO/view?usp=drive_link)
 
 
-### 12.  Hardware Implementation
+### The Team
 
+![alt text](Images/Pic1.JPG)
+
+### Acknowledgements
+
+We would like to extend our heartfelt gratitude to Professor **Nicholas McGill-Gardner** for his mentorship, guidance, and encouragement throughout the course. His insights and support have been pivotal to our learning journey. We are also deeply thankful to Account Manager **Haige Xu** for his assistance and support in managing our course-related requirements. Additionally, we greatly appreciate the dedication and support of our **Course TAs, Yadnik and Vishnu** whose efforts have enriched our learning experience and made this journey a rewarding one.
