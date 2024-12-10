@@ -1,5 +1,4 @@
 # NSYNC-Project-Website
-NSYNC Project Report
 
 ## 1. Abstract
 
