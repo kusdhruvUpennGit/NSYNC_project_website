@@ -231,7 +231,7 @@ During the configuration and testing of the XBee communication with the ATmega32
 
 After thorough debugging, we realized that the ATmega328P microcontroller was operating at a 20 MHz clock frequency instead of the expected 16 MHz. The incorrect assumption of the clock frequency had resulted in inaccurate prescaler calculations for the UART baud rate, causing the mismatch.
 
-• <b>Resolution</b>:To resolve this issue:
+• <b>Resolution</b>
 
 • <b>Prescaler Adjustment:</b> We recalculated the prescaler value for the UART baud rate based on the 20 MHz clock frequency, ensuring accurate baud rate settings.
 
@@ -279,6 +279,7 @@ Differential Drive System:<br>
     One motor faster than the other: The robot turns.<br>
     Motors moving in opposite directions: The robot spins in place.<br>
 •This setup allows the robot to make sharp turns and maintain a steady trajectory along the line.<br>
+
 PWM Control:<br>
 •Pulse Width Modulation (PWM): The motor speed is controlled by varying the duty cycle of the PWM signal.<br>
 •The onboard TB6612FNG motor driver chip generates PWM signals linked to the Timer2 in the ATmega328 microcontroller.<br>
@@ -289,20 +290,26 @@ PWM Control:<br>
 ### 10.2 Sensors
 
 The Pololu 3pi uses five reflectance sensors mounted underneath the chassis for line detection. These sensors are critical for determining the position of the robot on a line and ensuring accurate navigation. Here's a detailed breakdown:<br>
+
 Reflectance Sensor Design:<br>
 •Phototransistor-Based Sensors: The sensors use phototransistors to measure reflected light intensity. Bright surfaces reflect more light, while dark surfaces reflect less.<br>
+
 •The key components include:<br>
-    Infrared Emitter: Sends light to the surface.<br>
-    Phototransistor Detector: Measures the amount of reflected infrared light.<br>
+Infrared Emitter: Sends light to the surface.<br>
+Phototransistor Detector: Measures the amount of reflected infrared light.<br>
+
 Operation of Reflectance Sensors:<br>
+
 •The reflectance sensors are connected to the microcontroller’s digital inputs, such as PC0 (Port C).<br>
 •A capacitor discharge mechanism is used:<br>
-    The sensor pin is charged to 5V and then set to an input.<br>
-    The capacitor discharges through the phototransistor, and the rate of discharge depends on the reflectance.<br>
-    The microcontroller measures the time taken for the pin to drop below a certain threshold voltage.<br>
+ The sensor pin is charged to 5V and then set to an input.<br>
+The capacitor discharges through the phototransistor, and the rate of discharge depends on the reflectance.<br>
+The microcontroller measures the time taken for the pin to drop below a certain threshold voltage.<br>
+
 •Output Range:<br>
     White surfaces cause rapid discharge and low sensor values.<br>
     Black surfaces cause slow discharge and high sensor values.<br>
+
 Sensor Layout and Coverage:<br>
 •Five sensors are arranged in a row beneath the robot, ensuring wide coverage of the line.<br>
 •This layout allows the robot to detect curves and edges effectively, maintaining its trajectory even in complex paths.<br>
@@ -311,9 +318,11 @@ Sensor Layout and Coverage:<br>
 
 Microcontroller: ATmega328<br>
 •The ATmega328P microcontroller handles motor control, sensor data processing, and high-level decision-making.<br>
+
 •Timers and Ports Used:<br>
     Timer2: Generates PWM signals for motor speed control.<br>
     Port C (PC0-PC4): Interfaces with the reflectance sensors.<br>
+
 H-Bridge Motor Driver:<br>
 •The onboard TB6612FNG motor driver chip uses H-Bridge circuits to control motor direction.<br>
 •Directional Logic:<br>
@@ -323,11 +332,12 @@ H-Bridge Motor Driver:<br>
     PD5 = 0, PD6 = 1: Motor 1 reverses.<br>
 •Coasting and Braking:<br>
     Motors can be set to coast (no movement) or brake (immediate stop) by configuring the H-Bridge logic.<br>
-4. Buttons and Additional Inputs<br>
-Buttons for User Control:<br>
+
+Buttons and Additional Inputs:<br>
+
 •PB4 (Button B): Used for toggling between starting and stopping the robot.<br>
-    The button is connected with a pull-up resistor to avoid floating input values.<br>
-    Pressing the button sets the corresponding input to logic low (0), triggering the desired functionality in the firmware.<br>
+ The button is connected with a pull-up resistor to avoid floating input values.<br>
+ Pressing the button sets the corresponding input to logic low (0), triggering the desired functionality in the firmware.<br>
 
 
 
