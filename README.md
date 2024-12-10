@@ -194,6 +194,84 @@ Below screenshots show the configuration of xbee modules:
     Trigger motor activation upon detection.<br>
     Calibration to handle varying reflectivity of surfaces.<br>
 
+<table>
+  <thead>
+    <tr>
+      <th>HRS</th>
+      <th>Objective</th>
+      <th>Specifications</th>
+      <th>Expected Outcome</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HRS 1</td>
+      <td>Configuring the Pololu 3pi bot</td>
+      <td>Flash a test code using avrdude via Pololu USB AVR programmer v2 to check the bot's functionality.</td>
+      <td>Flash the .hex file at 115200 baud and verify proper functionality of the Pololu 3pi bot.</td>
+      <td><strong>Pass</strong>: The .hex file was successfully flashed, and the bot worked as expected.</td>
+    </tr>
+    <tr>
+      <td>HRS 2</td>
+      <td>Configuring the Pololu 3pi bot LEDs and Buzzers</td>
+      <td>Test the working of LEDs and buzzers for integration with further implementations.</td>
+      <td>Successfully blink LEDs and ring the buzzer with a square wave pulse.</td>
+      <td><strong>Pass</strong>: LEDs blinked and the buzzer rang as expected.</td>
+    </tr>
+    <tr>
+      <td>HRS 3</td>
+      <td>Configure the motors</td>
+      <td>Control the motors to make the bot rotate in a specific direction.</td>
+      <td>Make the bot rotate by configuring the left and right motors to move in opposite directions.</td>
+      <td><strong>Pass</strong>: The bot rotated as intended.</td>
+    </tr>
+    <tr>
+      <td>HRS 4</td>
+      <td>Configuring the QTR sensors</td>
+      <td>Test the QTR IR sensors by toggling LEDs when a black line is detected.</td>
+      <td>Toggle LEDs based on sensor readings: stop the red LED for right sensors and green LED for left sensors.</td>
+      <td><strong>Pass</strong>: LEDs toggled as expected based on sensor readings.</td>
+    </tr>
+    <tr>
+      <td>HRS 5</td>
+      <td>Configuring the XBee modules with the Pololu 3pi bot</td>
+      <td>Connect XBee routers to Pololu 3pi bots and send a simple print message to the XBee Coordinator.</td>
+      <td>Establish communication to display "Hello from pololu 3pi" on the serial monitor.</td>
+      <td><strong>Pass</strong>: Communication was established and the message was successfully displayed via UART.</td>
+    </tr>
+    <tr>
+      <td>HRS 6</td>
+      <td>Controlling the movement of the bots by giving controls in the serial monitor</td>
+      <td>Allow user to enter commands (1 for Bot 1, 2 for Bot 2) to control motor rotation and LED blinking.</td>
+      <td>Bot 1 rotates on command 1, and Bot 2 rotates on command 2, with LED feedback.</td>
+      <td><strong>Pass</strong>: Bots rotated and LEDs blinked as intended based on user input.</td>
+    </tr>
+    <tr>
+      <td>HRS 7</td>
+      <td>Send battery monitoring details from Pololu 3pi bot to the XBee Coordinator</td>
+      <td>Read battery voltage using ADC6 on the Pololu 3pi bot and transmit data to the XBee Coordinator.</td>
+      <td>Display battery voltage in millivolts on the XBee Coordinator serial monitor.</td>
+      <td><strong>Pass</strong>: Battery voltage was successfully transmitted and displayed.</td>
+    </tr>
+    <tr>
+      <td>HRS 8</td>
+      <td>Try configuring a smart battery monitoring system</td>
+      <td>Signal low battery with a buzzer and stop the motors when voltage falls below 4000mV.</td>
+      <td>Ring buzzer for 5 seconds, stop motors, blink RED LED, and display a low battery message on the serial monitor.</td>
+      <td><strong>Pass</strong>: System behaved as expected under low battery conditions.</td>
+    </tr>
+    <tr>
+      <td>HRS 9</td>
+      <td>Try implementing line following as part of task demonstration</td>
+      <td>Integrate QTR sensors, motors, and push buttons to enable line-following functionality.</td>
+      <td>Bot follows a line after configuration via button presses.</td>
+      <td><strong>Partially Achieved</strong>: Motors and sensors were configured, but calibration issues affected line-following performance.</td>
+    </tr>
+  </tbody>
+</table>
+
+
 ## 8. Main Issues Faced
 
 ### 8.1 Baud Rate Mismatch
