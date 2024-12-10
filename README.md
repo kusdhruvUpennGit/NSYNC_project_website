@@ -142,57 +142,6 @@ Below screenshots show the configuration of xbee modules:
 
 ## 6. Hardware Requirments
 
-### HRS 1: XBee S2C Modules<br>
-•Purpose: Wireless communication between the laptop, robots, and microcontrollers.<br>
-    •Key Requirements:<br>
-    Configurable using XCTU software for seamless communication.<br>
-    Reliable data transmission and reception for task assignment and monitoring.<br>
-    Proper antenna alignment and baud rate matching.<br>
-
-### HRS 2: Pololu 3pi Robots<br>
-•Purpose: Serve as the robotic platforms for executing tasks.<br>
-    •Key Features:<br>
-    Equipped with onboard motor drivers for precise motor control.<br>
-    Built-in IR sensors for line following and object detection.<br>
-    Expandable with external modules like XBee for wireless operations.<br>
-
-### HRS 3: ATmega328P Microcontroller (built in pololu 3pi bot)<br>
-•Purpose: Process commands, control motors, and handle peripheral components.<br>
-    •Key Requirements:<br>
-    Interfacing capability with XBee modules.<br>
-    Support for pushbutton controls for manual task testing.<br>
-    ADC functionality to monitor battery voltage.<br>
-
-### HRS 4: Motors (built in pololu 3pi bot)<br>
-•Purpose: Perform movement tasks as commanded.<br>
-    •Key Requirements:<br>
-    Compatible with the Pololu 3pi motor drivers.<br>
-    Reliable operation for tasks such as rotating and navigation.<br>
-
-### HRS 5: Buzzer (built in pololu 3pi bot)<br>
-•Purpose: Provide audio alerts for specific conditions (e.g., low battery).<br>
-    •Key Features:<br>
-    Triggered by battery voltage monitoring via the ADC.<br>
-    Stops operation of the bot to conserve energy when triggered.<br>
-
-### HRS 6: LEDs (built in pololu 3pi bot)<br>
-•Purpose: Provide visual feedback during operations.<br>
-    •Key Requirements:<br>
-    Indicate successful data transmission or task execution.<br>
-    Clear visibility in all operating environments.<br>
-
-### HRS 7: Pushbuttons (built in pololu 3pi bot)<br>
-•Purpose: Allow manual testing of bot operations and features.<br>
-    •Key Requirements:<br>
-    Responsive and easy to integrate with the microcontroller.<br>
-    Configurable for triggering specific tasks or actions.<br>
-
-### HRS 8: IR (QTR) Sensors (built in pololu 3pi bot)<br>
-•Purpose: Detect nearby objects and enable automated responses.<br>
-    •Key Requirements:<br>
-    Accurate detection of objects within proximity.<br>
-    Trigger motor activation upon detection.<br>
-    Calibration to handle varying reflectivity of surfaces.<br>
 
 <table>
   <thead>
